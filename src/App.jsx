@@ -13,11 +13,11 @@ const App = () => {
 
   return (
     <>
-      <Header handleToggleSidebar={handleToggleSidebar} />
+      <Header onToggleSidebar={handleToggleSidebar} />
       <div className="app__container">
         <SideBar
           isSidebarVisible={isSidebarVisible}
-          handleToggleSidebar={handleToggleSidebar}
+          onToggleSidebar={handleToggleSidebar}
         />
         <Container fluid className="app__main">
           <HomeScreen />

@@ -10,30 +10,33 @@ import {
   MdSentimentDissatisfied,
 } from "react-icons/md";
 
-const Sidebar = ({ isSidebarVisible, handleToggleSidebar }) => {
+const Sidebar = ({ isSidebarVisible, onToggleSidebar }) => {
   return (
-    <div className={!isSidebarVisible ? "sidebar" : "sidebar open"}>
-      <li onClick={handleToggleSidebar}>
+    <div
+      className={!isSidebarVisible ? "sidebar" : "sidebar open"}
+      onClick={onToggleSidebar}
+    >
+      <li>
         <MdHome size={23} />
         <span>Home</span>
       </li>
-      <li onClick={handleToggleSidebar}>
+      <li>
         <MdSubscriptions size={23} />
         <span>Subscriptions</span>
       </li>
-      <li onClick={handleToggleSidebar}>
+      <li>
         <MdThumbUp size={23} />
         <span>Like Video</span>
       </li>
-      <li onClick={handleToggleSidebar}>
+      <li>
         <MdHistory size={23} />
         <span>History</span>
       </li>
-      <li onClick={handleToggleSidebar}>
+      <li>
         <MdLibraryBooks size={23} />
         <span>Library</span>
       </li>
-      <li onClick={handleToggleSidebar}>
+      <li>
         <MdSentimentDissatisfied size={23} />
         <span>I don't Know</span>
       </li>
