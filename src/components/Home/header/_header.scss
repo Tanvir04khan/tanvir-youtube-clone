@@ -1,0 +1,109 @@
+@import "../../../base";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 10vh;
+  width: 100%;
+
+  padding: 1rem 3rem;
+
+  background: $black-primary;
+
+  &__menu {
+    display: none;
+  }
+
+  &__logo {
+    width: 30px;
+    height: 30px;
+
+    object-fit: contain;
+
+    display: block;
+  }
+
+  form {
+    display: flex;
+    flex: 0.6;
+
+    margin: 0 1rem;
+    padding: 0.1rem;
+
+    border-radius: 3px;
+    border: 1.2px solid;
+
+    background: $blach-secondar;
+
+    input {
+      width: 100%;
+
+      padding: 0.3rem;
+
+      border: none;
+
+      font-weight: 500;
+      color: $text-color;
+
+      background: transparent;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      padding: 0 1.25rem;
+
+      color: $text-color;
+
+      background: transparent;
+
+      border: none;
+
+      &:focus {
+        border: none;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex: 0.15;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      width: 40px;
+
+      margin-left: 5px;
+
+      border-radius: 50%;
+
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .header {
+    padding: 1rem;
+
+    form {
+      flex: 1;
+    }
+
+    &__menu {
+      display: block;
+    }
+
+    &__logo {
+      display: none;
+    }
+
+    &__icons > *:not(img) {
+      display: none;
+    }
+  }
+}
