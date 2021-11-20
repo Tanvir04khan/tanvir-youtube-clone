@@ -6,10 +6,14 @@ import { FaBars } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { MdNotifications, MdApps } from "react-icons/md";
 
-const Header = () => {
+const Header = ({ handleToggleSidebar }) => {
   return (
-    <div className="border border-dark header">
-      <FaBars className="header__menu" size={26} />
+    <div className="header">
+      <FaBars
+        className="header__menu"
+        size={26}
+        onClick={handleToggleSidebar}
+      />
       <img
         src="https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png"
         alt="Youtube logo"
