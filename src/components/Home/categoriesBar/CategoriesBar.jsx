@@ -33,7 +33,9 @@ const CategoriesBar = () => {
       {keywords.map((keyword, ind) => (
         <span
           kay={ind}
-          onClick={spanClickHandler.bind(null, keyword)}
+          onClick={() => {
+            spanClickHandler(keyword);
+          }}
           className={activeElement === keyword ? "active" : ""}
         >
           {keyword}
