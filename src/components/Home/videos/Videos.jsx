@@ -63,7 +63,7 @@ const Videos = ({ video }) => {
         <img src={medium.url} alt="Thumbnail" />
         <span>{videoSpan}</span>
       </div>
-      <div className="vodeo__title">{title}</div>
+      <div className="video__title">{title}</div>
       <div className="video__details">
         <span>
           <AiFillEye /> {numeral(views).format("0.a")} Views •

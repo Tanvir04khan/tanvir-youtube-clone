@@ -35,9 +35,11 @@
 
     color: #fff;
 
-    overflow: hidden;
-
     @include line-clamp(1);
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
   }
 
   &__details {
