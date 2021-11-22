@@ -23,7 +23,7 @@ const Videos = ({ video }) => {
   const [channelIcon, setChannelIcon] = useState(null);
 
   const seconds = moment.duration(duration).asSeconds();
-  const videoSpan = moment.utc(seconds * 1000).format("mm:ss");
+  const timeSpan = moment.utc(seconds * 1000).format("mm:ss");
 
   useEffect(() => {
     const getVideoDetails = async () => {
@@ -61,7 +61,7 @@ const Videos = ({ video }) => {
     <div className="video">
       <div className="video__top">
         <img src={medium.url} alt="Thumbnail" />
-        <span>{videoSpan}</span>
+        <span>{timeSpan}</span>
       </div>
       <div className="video__title">{title}</div>
       <div className="video__details">
