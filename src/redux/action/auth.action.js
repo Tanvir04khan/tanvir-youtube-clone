@@ -9,6 +9,8 @@ export const login = () => async (dispatch) => {
     });
 
     const provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope("https://www.googleapis.com/auth/youtube.force-ssl");
+
     const response = await auth.signInWithPopup(provider);
 
     const accessToken = response.credential.accessToken;
@@ -43,11 +45,8 @@ export const logout = () => async (dispatch) => {
 
   dispatch({
     type: actionTypes.LOG_OUT,
+  });
 
-  })
-
-  sessionStorage.removeItem("access-token")
-  sessionStorage.removeItem("profile")
-
-
+  sessionStorage.removeItem("access-token");
+  sessionStorage.removeItem("profile");
 };
