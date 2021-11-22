@@ -1,4 +1,4 @@
-import * as actions from "../actionType";
+import * as actionTypes from "../actionType";
 
 const initialState = {
   accessToken: sessionStorage.getItem("access-token"),
@@ -12,30 +12,30 @@ export const authReducer = (prevState = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
-    case actions.LOGIN_REQUEST:
+    case actionTypes.LOGIN_REQUEST:
       return {
         ...prevState,
         loading: true,
       };
-    case actions.LOGIN_SUCCESS:
+    case actionTypes.LOGIN_SUCCESS:
       return {
         ...prevState,
         accessToken: payload,
         loading: false,
       };
-    case actions.LOGIN_FAIL:
+    case actionTypes.LOGIN_FAIL:
       return {
         ...prevState,
         accessToken: null,
         loading: false,
         error: payload,
       };
-    case actions.LOAD_PROFILE:
+    case actionTypes.LOAD_PROFILE:
       return {
         ...prevState,
         user: payload,
       };
-    case actions.LOG_OUT:
+    case actionTypes.LOG_OUT:
       return {
         ...prevState,
         accessToken: null,
