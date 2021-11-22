@@ -13,15 +13,15 @@ import { useSelector } from "react-redux";
 const HomeScreenLayout = ({ children }) => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
-  const handleToggleSidebar = () => setIsSidebarVisible((value) => !value);
+  const ToggleSidebarHandler = () => setIsSidebarVisible((value) => !value);
 
   return (
     <>
-      <Header onToggleSidebar={handleToggleSidebar} />
+      <Header onToggleSidebar={ToggleSidebarHandler} />
       <div className="app__container">
         <SideBar
           isSidebarVisible={isSidebarVisible}
-          onToggleSidebar={handleToggleSidebar}
+          onToggleSidebar={ToggleSidebarHandler}
         />
         <Container fluid className="app__main">
           {children}
