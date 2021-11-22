@@ -35,6 +35,12 @@ export const authReducer = (prevState = initialState, action) => {
         ...prevState,
         user: payload,
       };
+    case actions.LOG_OUT:
+      return {
+        ...prevState,
+        accessToken: null,
+        user: null,
+      };
 
     default:
       return prevState;

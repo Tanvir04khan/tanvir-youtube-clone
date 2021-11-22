@@ -19,10 +19,7 @@ const HomeScreenLayout = ({ children }) => {
     <>
       <Header onToggleSidebar={ToggleSidebarHandler} />
       <div className="app__container">
-        <SideBar
-          isSidebarVisible={isSidebarVisible}
-          onToggleSidebar={ToggleSidebarHandler}
-        />
+        <SideBar isSidebarVisible={isSidebarVisible} />
         <Container fluid className="app__main">
           {children}
         </Container>

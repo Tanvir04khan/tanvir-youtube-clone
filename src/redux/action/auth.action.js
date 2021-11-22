@@ -10,7 +10,7 @@ export const login = () => async (dispatch) => {
 
     const provider = new firebase.auth.GoogleAuthProvider();
     const response = await auth.signInWithPopup(provider);
-  
+
     const accessToken = response.credential.accessToken;
     const profile = {
       name: response.additionalUserInfo.profile.name,
@@ -36,4 +36,18 @@ export const login = () => async (dispatch) => {
       error: error.message,
     });
   }
+};
+
+export const logout = () => async (dispatch) => {
+  await auth.signOut();
+
+  dispatch({
+    type: actions.LOG_OUT,
+
+  })
+
+  sessionStorage.removeItem("access-token")
+  sessionStorage.removeItem("profile")
+
+  
 };
