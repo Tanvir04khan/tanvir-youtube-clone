@@ -1,6 +1,8 @@
 import React from "react";
-import "./_header.scss";
 import avatar from "../../../assets/images/pngwing.com.png";
+import youtubeLogo from "../../../assets/images/youtube-logo.png";
+
+import "./_header.scss";
 
 import { FaBars } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -10,11 +12,7 @@ const Header = ({ onToggleSidebar }) => {
   return (
     <div className="header">
       <FaBars className="header__menu" size={26} onClick={onToggleSidebar} />
-      <img
-        src="https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png"
-        alt="Youtube logo"
-        className="header__logo"
-      />
+      <img src={youtubeLogo} alt="Youtube logo" className="header__logo" />
       <form>
         <input type="text" placeholder="Search" />
         <button type="submit">
