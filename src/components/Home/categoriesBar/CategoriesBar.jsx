@@ -32,7 +32,7 @@ const CategoriesBar = () => {
     <div className="categoriesbar">
       {keywords.map((keyword, ind) => (
         <span
-          kay={ind}
+          key={ind}
           onClick={() => {
             spanClickHandler(keyword);
           }}
